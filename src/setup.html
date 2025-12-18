@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RomM Deck</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background:#0b0f14; color:#e8eef6; margin:0; }
+    .wrap { max-width: 720px; margin: 48px auto; padding: 24px; }
+    h1 { margin: 0 0 12px; font-size: 28px; }
+    p { opacity: .85; }
+    input { width:100%; font-size:18px; padding:14px; border-radius:12px; border:1px solid #2a3646; background:#0f1621; color:#e8eef6; }
+    button { margin-top: 14px; font-size:18px; padding:14px 16px; border-radius:12px; border:0; background:#2f7cf6; color:white; width:100%; }
+    .err { margin-top: 12px; color:#ff6b6b; min-height: 24px; }
+    .hint { margin-top:10px; opacity:.75; font-size:14px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Configurer ton serveur RomM</h1>
+    <p>Entre l’URL ou <code>IP:port</code> de ton instance. Exemple: <code>https://romm.mondomaine.tld</code> ou <code>192.168.1.10:8080</code>.</p>
+
+    <input id="url" placeholder="https://..." autocomplete="off" />
+    <button id="save">Enregistrer et ouvrir RomM</button>
+    <div class="err" id="err"></div>
+    <div class="hint">Astuce: tu peux changer ça plus tard (on ajoutera un menu/shortcut).</div>
+  </div>
+
+  <script src="./setup.js"></script>
+</body>
+</html>

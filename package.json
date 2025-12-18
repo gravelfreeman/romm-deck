@@ -1,0 +1,36 @@
+{
+  "name": "romm-deck",
+  "version": "1.0.0",
+  "description": "Romm fullscreen wrapper for Steam Deck",
+  "main": "src/main.js",
+  "type": "commonjs",
+  "author": "Freeman",
+  "scripts": {
+    "dev": "electronmon .",
+    "start": "electron .",
+    "dist:linux": "electron-builder --linux AppImage --x64"
+  },
+  "dependencies": {
+    "electron-store": "^11.0.2",
+    "steamworks.js": "^0.4.0"
+  },
+  "devDependencies": {
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12",
+    "electronmon": "^2.0.4"
+  },
+  "build": {
+    "appId": "app.romm.deck",
+    "productName": "Romm",
+    "linux": {
+      "target": ["AppImage"],
+      "category": "Game",
+      "executableName": "romm-deck"
+    },
+    "files": [
+      "src/**/*",
+      "package.json",
+      "node_modules/**/*"
+    ]
+  }
+}
